@@ -18,8 +18,7 @@ public class LinkedList {
         Node newNode = new Node(value);
         head = newNode;
         tail = newNode;
-        length = 1;
-
+        length=1;
     }
 
     //   +===================================================+
@@ -41,16 +40,16 @@ public class LinkedList {
     //   +===================================================+
 
 
-    public Node getHead() {
-        return head;
+    public void getHead() {
+        System.out.println("Head : "+head.value);
     }
 
-    public Node getTail() {
-        return tail;
+    public void getTail() {
+        System.out.println("Tail : "+tail.value);
     }
 
-    public int getLength() {
-        return length;
+    public void getLength() {
+        System.out.println("Length: "+length);
     }
 
     public void printList() {

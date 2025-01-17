@@ -9,6 +9,9 @@ public class Main {
         System.out.println("Hello and welcome!");
 
         LinkedList linkedList = new LinkedList(4);
+        linkedList.append(6);
         linkedList.printAll();
+
+
     }
 }

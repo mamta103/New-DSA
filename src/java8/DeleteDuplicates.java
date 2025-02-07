@@ -25,3 +25,16 @@ public class DeleteDuplicates {
         System.out.println(result);
     }
 }
+
+Output:
+Employee{id=101, firstName='Alice', lastName='Smith', department='Finance', salary=75000.0, email='alice.smith@example.com'}
+Employee{id=102, firstName='Bob', lastName='Johnson', department='HR', salary=68000.0, email='bob.johnson@example.com'}
+Employee{id=103, firstName='Charlie', lastName='Brown', department='IT', salary=85000.0, email='charlie.brown@example.com'}
+Employee{id=104, firstName='David', lastName='Lee', department='Marketing', salary=72000.0, email='david.lee@example.com'}
+Employee{id=105, firstName='Eva', lastName='Adams', department='Operations', salary=79000.0, email='eva.adams@example.com'}
+
+[Employee{id=105, firstName='Eva', lastName='Adams', department='Operations', salary=79000.0, email='eva.adams@example.com'},
+Employee{id=103, firstName='Charlie', lastName='Brown', department='IT', salary=85000.0, email='charlie.brown@example.com'},
+Employee{id=102, firstName='Bob', lastName='Johnson', department='HR', salary=68000.0, email='bob.johnson@example.com'}, 
+Employee{id=104, firstName='David', lastName='Lee', department='Marketing', salary=72000.0, email='david.lee@example.com'}, 
+Employee{id=101, firstName='Alice', lastName='Smith', department='Finance', salary=75000.0, email='alice.smith@example.com'}]

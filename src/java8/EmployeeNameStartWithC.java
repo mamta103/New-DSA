@@ -22,3 +22,4 @@ public class EmployeeNameStartWithC {
         System.out.println("listEmployeeNameStartWithC :: " + listEmployeeNameStartWithC);
     }
 }
+Output::listEmployeeNameStartWithC :: [Employee{id=103, firstName='Charlie', lastName='Brown', department='IT', salary=85000.0, email='charlie.brown@example.com'}]

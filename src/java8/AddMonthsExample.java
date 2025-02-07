@@ -12,5 +12,8 @@ public class AddMonthsExample {
         
         // Print the new date after adding 2 months
         System.out.println("New LocalDate After Adding 2 months: " + newDate);
+
+        
     }
 }
+//Output: New LocalDate After Adding 2 months: 2025-04-07

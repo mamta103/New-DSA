@@ -11,13 +11,13 @@ public class Employee {
     // Constructor
 
 
-    public Employee(int id, String email, double salary, String department, String lastName, String firstName) {
+    public Employee(int id, String firstName, String lastName, String department, double salary, String email) {
         this.id = id;
-        this.email = email;
-        this.salary = salary;
-        this.department = department;
-        this.lastName = lastName;
         this.firstName = firstName;
+        this.lastName = lastName;
+        this.department = department;
+        this.salary = salary;
+        this.email = email;
     }
 
     // Getters and Setters

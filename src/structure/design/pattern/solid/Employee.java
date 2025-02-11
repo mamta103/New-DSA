@@ -4,7 +4,7 @@ public class Employee {
     private int id;
     private String name;
     //Noe Employee can use  address class
-//    private Address address;
+    private Address address;
 
     public Employee(int id, String name) {
         this.id = id;

@@ -1,4 +1,4 @@
 package parking.lot.design.pattern;
 
-public class ParkingLot {
+public class ParkingLot{
 }

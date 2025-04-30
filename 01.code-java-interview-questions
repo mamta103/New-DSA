@@ -1,0 +1,24 @@
+1.https://github.com/mamta103/New-DSA/new/main?
+2.Private method introduce in interface and why in java 9? 
+3.When we should go for dafult method and when we should go for static method? 
+4.Can We Pass Varargs in the main Method? 
+5.Equals and HashCode Contract in Java 
+6.Can you tell me why equals is not enough but also have to hashcode? 
+7.What is diff base classs and abstarct class? 
+8.What is marker interface in java? 
+9.Can we create our own marker interface? 
+10.What is volatile keyword? 
+11.Can we write funcationl inaterface without abstarct method? 
+12.We have tree set add ing null another object abc, we want t print it(RTE)Comparable.comapreTo(null) 
+13.If we write system.exit() in the try-or-catch block, will finally block will execute?
+14.What are the different components in microservices? 
+15.How curcuit breaker works? 
+16.What is fault isolation? 
+17.What are the different ways to create SpringBoot applications? 
+18.What are the advantages of Spring Boot Actuator? 
+19.What is Maven Plugin? 
+20.What is setting.xml? 
+21.What is cluster and non-cluster index? 
+22.what is view in SQL and what the difference from the table 
+23.What is a stored procedure and how it is different from View? 
+

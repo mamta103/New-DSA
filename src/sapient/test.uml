@@ -1,0 +1,18 @@
+@startuml
+class CustomerOnboardingStatusService {
+    +getCustomerOnboardingStatus(Long customerId) : String
+    +getTopFailureReasonsForMonth(String month) : List<Map<String, Object>>
+}
+
+class CustomerStatusNotFoundException {
+    -message : String
+    +CustomerStatusNotFoundException(String message)
+}
+
+class GlobalExceptionHandler {
+    +handleCustomerStatusNotFoundException(CustomerStatusNotFoundException ex) : ResponseEntity<String>
+}
+
+CustomerOnboardingStatusService --> CustomerStatusNotFoundException : uses
+GlobalExceptionHandler ..|> CustomerStatusNotFoundException : handles
+@enduml

@@ -8,6 +8,7 @@ public class SortListStringDecendingOrder {
         // Step 1: Create a list of strings
         List<String> strings = Arrays.asList("on", "Shivam", "is", "Radhakrishna", "Rohit");
 
+       List<String> o =  strings.stream().sorted(String::compareTo).toList();;
         // Step 2: Print the list before sorting
         System.out.println("Before Sorting ::");
         strings.forEach(System.out::println);

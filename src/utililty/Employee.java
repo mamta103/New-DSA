@@ -1,23 +1,36 @@
-package java8;
+package utililty;
 
-public class Employee {
+import org.jetbrains.annotations.NotNull;
+
+import java.util.Objects;
+
+public class Employee  implements Comparable<Employee>{
     private int id;
     private String firstName;
     private String lastName;
     private String department;
     private double salary;
     private String email;
-
+    private String city;
     // Constructor
 
 
-    public Employee(int id, String firstName, String lastName, String department, double salary, String email) {
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public Employee(int id, String firstName, String lastName, String department, double salary, String email, String city) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.department = department;
         this.salary = salary;
         this.email = email;
+        this.city = city;
     }
 
     // Getters and Setters
@@ -53,7 +66,7 @@ public class Employee {
         this.department = department;
     }
 
-    public  double getSalary() {
+    public double getSalary() {
         return salary;
     }
 
@@ -71,6 +84,7 @@ public class Employee {
 
     // ToString method for easy output
 
+
     @Override
     public String toString() {
         return "Employee{" +
@@ -80,6 +94,24 @@ public class Employee {
                 ", department='" + department + '\'' +
                 ", salary=" + salary +
                 ", email='" + email + '\'' +
+                ", city='" + city + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(@NotNull Employee o) {
+        return Integer.compare(this.id, o.id);
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Employee employee)) return false;
+        return Objects.equals(department, employee.department);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(department);
     }
 }

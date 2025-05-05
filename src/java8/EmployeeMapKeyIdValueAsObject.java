@@ -1,8 +1,7 @@
 package java8;
 
-import org.jetbrains.annotations.NotNull;
+import utililty.Employee;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -14,23 +13,25 @@ public class EmployeeMapKeyIdValueAsObject {
         String[] names = {"Sunil", "Vasu", "Shivu", "Sonu", "Priya", "Olivia", "Sunil"};
         String department = "Sunil Yadav Vasu Shivu Sunil Yadav";
 
-        Employee emp1 = new Employee(101, "John", "Doe", "Engineering", 75000.0, "john.doe@example.com");
-        Employee emp2 = new Employee(102, "Jane", "Smith", "HR", 65000.0, "jane.smith@example.com");
-        Employee emp3 = new Employee(103, "Alice", "Johnson", "Marketing", 70000.0, "alice.johnson@example.com");
-        Employee emp4 = new Employee(104, "Bob", "Brown", "Finance", 80000.0, "bob.brown@example.com");
-        Employee emp5 = new Employee(105, "Charlie", "Davis", "Sales", 60000.0, "charlie.davis@example.com");
-        List<Employee> employees = Arrays.asList(emp1, emp2, emp3, emp4, emp5);
+        List<Employee> employees = Arrays.asList(
+                new Employee(1, "Amit", "Sharma", "IT", 75000.00, "amit.sharma@example.com", "Bangalore"),
+                new Employee(2, "Priya", "Verma", "Finance", 85000.00, "priya.verma@example.com", "Mumbai"),
+                new Employee(3, "Rahul", "Patel", "HR", 65000.00, "rahul.patel@example.com", "Delhi"),
+                new Employee(4, "Sneha", "Reddy", "Marketing", 70000.00, "sneha.reddy@example.com", "Hyderabad"),
+                new Employee(5, "Vikram", "Singh", "Engineering", 95000.00, "vikram.singh@example.com", "Chennai")
+        );
 
-      Map<Integer, Employee> mapResult=   employees.stream().collect(Collectors.toMap(Employee::getId, emp->emp));
-        System.out.println("mapResult: "+mapResult);
+        //Keeping Employeas a key and value as a Object
+        Map<Integer, Employee> employeeMap = employees.stream().collect(Collectors.toMap(Employee::getId, e -> e));
+        System.out.println("employeeMap :" + employeeMap);
 
-        @NotNull Map<String, Long> resultMap = employees.stream().collect(Collectors.groupingBy(Employee::getDepartment, Collectors.counting()));
-        System.out.println(resultMap);
+        // Group employees by city using Java Streams
+        Map<String, List<Employee>> emp = employees.stream().collect(Collectors.groupingBy(Employee::getCity));
+        System.out.println("emp :" + emp);
 
         Map<String, Long> nameResult = Arrays.stream(names).collect(Collectors.groupingBy(s -> s, Collectors.counting()));
         System.out.println("nameResult : " + nameResult);
         System.out.println(department.toCharArray());
-
 
 
     }
